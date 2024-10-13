@@ -1,0 +1,45 @@
+.home-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .home-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .home-container h1 {
+    font-size: 36px;
+    margin: 10px 0;
+  }
+  
+  .home-container h2 {
+    font-size: 24px;
+    color: #777;
+  }
+  
+  .home-container p {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+  
+  .experience h3 {
+    font-size: 28px;
+    margin: 20px 0;
+  }
+  
+  .experience ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .experience ul li {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  img{
+    border: 1px solid black
+  }

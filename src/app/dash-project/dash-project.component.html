@@ -1,0 +1,58 @@
+<div class="container">
+        <div class="projects-container">
+            <ul class="project-list">
+            <li class="project-item" *ngFor="let project of projects">
+                <div class="project-content">
+                <!-- صورة الخلفية -->
+                <div class="card" [style.backgroundImage]="'url(' + project.imageUrl + ')'">
+                </div>
+                
+                <!-- معلومات المشروع -->
+                <div class="project-info">
+                    <h2 class="name-pro">{{ project.name }}</h2>
+                    <p class="des" *ngIf="project.description">{{ project.description }}</p>
+                    </div>
+                    
+                    <!-- أزرار الإجراءات -->
+                    <div class="project-actions">
+                    <a [href]="project.githubUrl" target="_blank" class="project-link">GitHub</a>
+                    <button (click)="editProject(project)" class="edit-btn">Edit</button>
+                    <button (click)="deleteProject(project._id)" class="delete-btn">Delete</button>
+                </div>
+                </div>
+            </li>
+            </ul>
+              <!-- فورم التعديل -->
+  <div *ngIf="selectedProject" class="edit-form">
+    <h3>Edit Project</h3>
+    <form (ngSubmit)="updateProject()">
+        <label>Name:</label>
+      
+      <input placeholder="Name" [(ngModel)]="selectedProject.name" name="name" required>
+      <br>
+      <label>Description:</label>
+      <input [(ngModel)]="selectedProject.description" name="description">
+      <br>
+      <label>GitHub URL:</label>
+      <input [(ngModel)]="selectedProject.githubUrl" name="githubUrl">
+     <br>
+      <label>Image URL:</label>
+      <input [(ngModel)]="selectedProject.imageUrl" name="imageUrl">
+  <br>
+      <button type="submit" class="update-btn">Update Project</button>
+    </form>
+  </div><br><br>
+  <!-- ////////////////////////////////////////////////////// -->
+
+        </div>
+        <div class="skills">
+            <div  *ngFor="let skill of skills">
+                
+                <h2>{{ skill.name }}  <button (click)="deleteSkill(skill._id)" class="delete-btn">Delete</button></h2>
+                <hr>
+            </div>
+        </div>
+</div>
+
+
+  

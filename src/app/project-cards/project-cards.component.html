@@ -1,0 +1,30 @@
+<!-- <br>
+<div class="category-switcher">
+    <button *ngFor="let category of categories" 
+            (click)="switchCategory(category)" 
+            [class.active]="category === selectedCategory">
+      {{ category }}
+    </button>
+  </div>
+  
+  <div class="projects-container">
+    <div class="project-item" *ngFor="let project of projects[selectedCategory]">
+      <div class="card" [style.backgroundImage]="'url(' + project.image + ')'">
+        <a [href]="project.url" target="_blank" class="project-link">View Project</a>
+      </div>
+      <h2>{{ project.name }}</h2>
+      <p *ngIf="project.description">{{ project.description }}</p>
+    </div>
+  </div>
+  
+   -->
+
+   <div class="projects-container">
+    <div class="project-item" *ngFor="let project of projects">
+      <div class="card" [style.backgroundImage]="'url(' + project.imageUrl + ')'">
+        <a [href]="project.githubUrl" target="_blank" class="project-link">View Project</a>
+      </div>
+      <h2>{{ project.name }}</h2>
+      <p *ngIf="project.description">{{ project.description }}</p>
+    </div>
+  </div>

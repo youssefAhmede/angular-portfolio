@@ -1,0 +1,41 @@
+.dashboard-container {
+    padding: 20px;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    margin-right: 10px;
+  }
+  
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .project-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .forma{
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 50px;
+    padding: 10px;
+}

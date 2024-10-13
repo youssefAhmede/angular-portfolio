@@ -1,0 +1,21 @@
+<h4>Add Review</h4>
+<div class="forma">
+    <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
+        <label>0&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;5</label><br>
+        <input type="range" min="0" max="5" formControlName="rate" placeholder="Review Rate" value="3"  required><br>
+        <input formControlName="comment" placeholder="Comment" required><br>
+        <button type="submit">Add Review</button>
+    </form>
+</div>
+<hr>
+<h2>All Reviews</h2>
+<div>
+    <div *ngFor="let review of reviews">
+        <h3>{{ review.rate }}</h3>
+        <p>{{ review.comment }}</p>
+        <small>Reviewed on: {{ review.createdAt | date:'short' }}</small>
+    </div>
+</div>
+
+
+
